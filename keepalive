@@ -1,9 +1,31 @@
 #!/bin/bash
 
-URL="$1"
-DELAY="$2"
+usage() {
+    echo "Usage: $0 -u <url> [-t <sleep>]" 1>&2;
+    exit 1;
+}
 
-if [ -z "$DELAY" ]
+while getopts ":u:t:" o; do
+    case "${o}" in
+        u)
+            URL=${OPTARG}
+            ;;
+        t)
+            DELAY=${OPTARG}
+            # TODO validate number
+            ;;
+        *)
+            usage
+            ;;
+    esac
+done
+shift $((OPTIND-1))
+
+if [ -z "${URL}" ]; then
+    usage
+fi
+
+if [ -z "${DELAY}" ]
 then
   DELAY=60
 fi
