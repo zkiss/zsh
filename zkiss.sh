@@ -86,8 +86,7 @@ setup_aliases () {
 
 print_env () {
 	color="\e[1;34m"
-	echo 'Common environment variables:'
-	echo -e "${color}ANT_HOME\e[00m="$ANT_HOME
+	echo 'Environment:'
 	echo -e "${color}JAVA_HOME\e[00m="$JAVA_HOME
 	echo -e "${color}MY_APPZ\e[00m="$MY_APPZ
 	echo '-----------------------------------------------------'
