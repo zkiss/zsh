@@ -1,0 +1,16 @@
+#!/bin/bash
+
+URL="$1"
+DELAY="$2"
+
+if [ -z "$DELAY" ]
+then
+  DELAY=60
+fi
+
+while :
+do
+  echo "Pinging $URL"
+  curl $URL
+  sleep $DELAY
+done
