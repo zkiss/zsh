@@ -7,14 +7,14 @@ setup_misc () {
 	export PS1='\u@\h:\[\e[0;36m\]\w\[\e[0m\]$ '
 
 	# stop some commands being added to bash history
-	export HISTIGNORE="&:ls:[bf]g:exit:history:e:prev"
+	export HISTIGNORE="&:ls:[bf]g:exit:history:e:prev:ll"
 	# don't put duplicate lines in the history. See bash(1) for more options
 	# ... or force ignoredups and ignorespace
 	HISTCONTROL=ignoredups:ignorespace
 	# append to the history file, don't overwrite it
 	shopt -s histappend
 	# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-	HISTSIZE=1000
+	HISTSIZE=2000
 	#HISTFILESIZE=2000
 	# check the window size after each command and, if necessary,
 	# update the values of LINES and COLUMNS.
