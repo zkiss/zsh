@@ -34,5 +34,6 @@ while :
 do
   echo "Pinging $URL"
   curl $URL
+  echo ""
   sleep $DELAY
 done
