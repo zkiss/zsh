@@ -82,6 +82,10 @@ setup_aliases () {
 	
 	alias diff='colordiff'
 	alias sudo='sudo '
+
+	# show manually installed packages
+	# http://askubuntu.com/questions/2389/generating-list-of-manually-installed-packages-and-querying-individual-packages
+	alias installed="comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u)"
 }
 
 print_env () {
