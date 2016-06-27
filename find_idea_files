@@ -1,0 +1,4 @@
+#!/bin/bash
+
+find . -type d -name '.idea'
+find . -type f -name '*.iml'
