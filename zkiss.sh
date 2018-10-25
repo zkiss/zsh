@@ -118,8 +118,35 @@ zinit
 # Functions
 
 # save current dir as an alias
-function s () {
-	alias "$1"="cd $PWD"
+s () {
+	typeset label=$1
+	bookmark -l $label -d $PWD
+}
+
+
+bookmark () {
+	typeset OPTIND OPTARG o label dir print
+	while getopts ":l:d:p" o; do
+		case "${o}" in
+			l)
+				label="${OPTARG}"
+				;;
+			d)
+				dir="${OPTARG}"
+				;;
+			p)
+				print=1
+				;;
+		esac
+	done
+
+	if [ "$print" = 1 ]; then
+		echo $dir
+	elif [ "$label" ]; then
+		alias "$label"="bookmark -d $dir"
+	else
+		cd $dir
+	fi
 }
 
 zed () {
