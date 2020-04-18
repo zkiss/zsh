@@ -1,4 +1,5 @@
-
+# simple bookmark management
+#
 function bookmark {
 	typeset OPTIND
 	typeset OPTARG
@@ -27,4 +28,10 @@ function bookmark {
 	else
 		cd $dir
 	fi
+}
+
+# alias for quick usage
+function s {
+        typeset label=$1
+        bookmark -l $label -d $PWD
 }
