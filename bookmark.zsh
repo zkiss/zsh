@@ -24,7 +24,7 @@ function bookmark {
 	if [ "$print" = 1 ]; then
 		echo $dir
 	elif [ "$label" ]; then
-		alias "$label"="bookmark -d $dir"
+		alias "$label"='bookmark -d "'$dir'"'
 	else
 		cd $dir
 	fi
