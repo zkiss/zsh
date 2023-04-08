@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# run args as separate process
+# create subshell so that no output is generated for printing background process id
+(
+  $@ &
+) > /dev/null 2>&1
