@@ -1,6 +1,6 @@
 alias du='du -h'
 alias df='df -h'
-alias '?'='du --max-depth 1'
+alias '?'='du --max-depth 1 2>/dev/null'
 
 alias ll='ls -alFh'
 alias la='ls -A'
