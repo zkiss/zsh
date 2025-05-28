@@ -1,1 +1,1 @@
-PATH=$PATH:$ZSH_CUSTOM/bin
+export PATH=$PATH:$ZSH_CUSTOM/bin
