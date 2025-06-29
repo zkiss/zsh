@@ -1,3 +1,3 @@
-if [ ! -z "$GO_PATH" ]; then
-  export PATH=$PATH:$GO_PATH/bin
+if [ ! -z "$GOPATH" ]; then
+  export PATH=$PATH:$GOPATH/bin
 fi
