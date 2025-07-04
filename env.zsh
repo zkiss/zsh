@@ -4,3 +4,6 @@ export HISTORY_IGNORE="(&|ls|[bf]g|exit|history|e|prev|ll"
 
 export EDITOR=vi
 export VISUAL=vi
+
+# stop pulling new lines from other shells
+unsetopt SHARE_HISTORY
